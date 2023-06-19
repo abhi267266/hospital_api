@@ -14,7 +14,18 @@ const ReportSchema = new mongoose.Schema({
   },
   status: {
     type: "String",
-    enum: ["Negative", "Travelled-Quarantine", "Symptoms-Quarantine", "Positive-Admit"]
+    enum: [
+      "Admitted",
+      "Discharged",
+      "Inpatient",
+      "Outpatient",
+      "Emergency",
+      "Intensive Care Unit (ICU)",
+      "Observation",
+      "Surgery",
+      "Pending",
+      "Transfer"
+  ]
   },
   date: {
     type: Date,
